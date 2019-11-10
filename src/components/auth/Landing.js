@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
 
@@ -74,18 +75,37 @@ class Login extends Component {
                     </div>
                 </div>
                 <div className='col s12 center-align'>
-                    <button
-                        style={{
-                            alignSelf: 'center',
-                            width: "150px",
-                            borderRadius: "3px",
-                            letterSpacing: "1.5px",
-                            marginTop: "1rem"
-                        }}
-                        type="submit"
-                        className="btn btn-large waves-effect waves-light hoverable blue accent-3">
-                        Sign In
-                                    </button>
+                    <div><Link to="/home" >
+                        <button
+                            style={{
+                                alignSelf: 'center',
+                                width: "150px",
+                                borderRadius: "3px",
+                                letterSpacing: "1.5px",
+                                marginTop: "1rem"
+                            }}
+                            type="submit"
+                            className="btn btn-large waves-effect waves-light hoverable blue accent-3">
+                            Sign In
+                                </button>
+                    </Link>
+                    </div>
+                    <div><Link to="/admin" >
+                        <button
+                            style={{
+                                alignSelf: 'center',
+                                width: "150px",
+                                borderRadius: "3px",
+                                letterSpacing: "1.5px",
+                                marginTop: "1rem"
+                            }}
+                            type="submit"
+                            className="btn btn-large waves-effect waves-light hoverable blue accent-3">
+                            Admin Sign In
+                                </button>
+                    </Link>
+                    </div>
+
                 </div>
             </div>
         );

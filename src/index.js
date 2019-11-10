@@ -7,6 +7,8 @@ import * as serviceWorker from './serviceWorker';
 import Register from './components/auth/Register';
 import Home from './components/layout/Home';
 import Admin from './components/layout/adminHome';
+import SearchU from './components/layout/searchUser';
+import SearchR from './components/layout/searchReport';
 
 
 const routing = (
@@ -16,6 +18,8 @@ const routing = (
             <Route exact path="/home" component={Home} />
             <Route exact path="/admin" component={Admin} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/searchreport" component={SearchR} />
+            <Route exact path="/searchuser" component={SearchU} />
         </div>
     </Router>
 )

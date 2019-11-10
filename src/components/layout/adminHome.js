@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { AppBar, Tab, Tabs } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Box from '@material-ui/core/Box';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     mainFeaturedPost: {
@@ -85,7 +86,6 @@ export default function Home() {
             }}>
 
             <div className={classes.mainFeaturedPost} style={{ width: '100vw' }}>
-                <div className={classes.overlay} />
                 <Grid container>
                     <Grid item md={6}>
                         <div className={classes.mainFeaturedContent}>
@@ -102,9 +102,8 @@ export default function Home() {
 
             <AppBar position="static" style={{ backgroundColor: 'rgb(23,102,151,1)' }} >
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-                    <Tab label="Management" {...a11yProps(0)} style={{ flex: 1 }} />
-                    <Tab label="Report Management" {...a11yProps(1)} style={{ flex: 1 }} />
-                    <Tab label="User Management" {...a11yProps(2)} style={{ flex: 1 }} />
+                    <Tab label="Report Management" {...a11yProps(0)} style={{ flex: 1 }} />
+                    <Tab label="User Management" {...a11yProps(1)} style={{ flex: 1 }} />
                     <button style={{
                         fontSize: '1.5vh',
                         width: "5vw",
@@ -117,66 +116,82 @@ export default function Home() {
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-
+                <div className="col s12 center-align">
+                    <div>
+                        <Link to="/searchreport" >
+                            <button
+                                style={{
+                                    alignSelf: 'center',
+                                    width: "300px",
+                                    borderRadius: "10px",
+                                    letterSpacing: "1px",
+                                    marginTop: "5rem",
+                                    marginBottom: '5rem'
+                                }}
+                                className="btn btn-large waves-effect waves-light hoverable blue accent-3">
+                                Add new report
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="col s12 center-align">
+                    <div>
+                        <Link to="/searchreport" >
+                            <button
+                                style={{
+                                    alignSelf: 'center',
+                                    width: "300px",
+                                    borderRadius: "10px",
+                                    letterSpacing: "1px",
+                                    marginTop: "1rem",
+                                    marginBottom: '5rem'
+                                }}
+                                className="btn btn-large waves-effect waves-light hoverable blue accent-3">
+                                Update/ Remove a report
+                            </button>
+                        </Link>
+                    </div>
+                </div>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <div className="col s12 center-align">
-                    <button
-                        style={{
-                            alignSelf: 'center',
-                            width: "300px",
-                            borderRadius: "10px",
-                            letterSpacing: "1px",
-                            marginTop: "5rem",
-                            marginBottom: '5rem'
-                        }}
-                        className="btn btn-large waves-effect waves-light hoverable blue accent-3">
-                        Add new report
-                </button>
+                    <div>
+                        <Link to="/register" >
+                            <button
+                                style={{
+                                    alignSelf: 'center',
+                                    width: "300px",
+                                    borderRadius: "10px",
+                                    letterSpacing: "1px",
+                                    marginTop: "5rem",
+                                    marginBottom: '5rem'
+                                }}
+                                className="btn btn-large waves-effect waves-light hoverable blue accent-3">
+                                Register a new user
+                            </button>
+                        </Link>
+                    </div>
                 </div>
                 <div className="col s12 center-align">
-                    <button
-                        style={{
-                            alignSelf: 'center',
-                            width: "300px",
-                            borderRadius: "10px",
-                            letterSpacing: "1px",
-                            marginTop: "1rem",
-                            marginBottom: '5rem'
-                        }}
-                        className="btn btn-large waves-effect waves-light hoverable blue accent-3">
-                        Update/ Remove a report
-                </button>
+                    <div>
+                        <Link to="/searchuser" >
+                            <button
+                                style={{
+                                    alignSelf: 'center',
+                                    width: "300px",
+                                    borderRadius: "10px",
+                                    letterSpacing: "1px",
+                                    marginTop: "1rem"
+                                }}
+                                className="btn btn-large waves-effect waves-light hoverable blue accent-3">
+                                Remove an existing user
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <div className="col s12 center-align">
-                    <button
-                        style={{
-                            alignSelf: 'center',
-                            width: "300px",
-                            borderRadius: "10px",
-                            letterSpacing: "1px",
-                            marginTop: "5rem",
-                            marginBottom: '5rem'
-                        }}
-                        className="btn btn-large waves-effect waves-light hoverable blue accent-3">
-                        Register a new user
-                </button>
-                </div>
-                <div className="col s12 center-align">
-                    <button
-                        style={{
-                            alignSelf: 'center',
-                            width: "300px",
-                            borderRadius: "10px",
-                            letterSpacing: "1px",
-                            marginTop: "1rem"
-                        }}
-                        className="btn btn-large waves-effect waves-light hoverable blue accent-3">
-                        Remove an existing user
-                </button>
-                </div>
+
             </TabPanel>
         </div>
     );
