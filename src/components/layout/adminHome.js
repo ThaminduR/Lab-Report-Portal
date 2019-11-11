@@ -77,7 +77,7 @@ export default function Home() {
     return (
         <div
             style={{
-                width: '100vw',
+                width: '99vw',
                 height: '100vh',
                 backgroundImage: "url('https://c7.uihere.com/files/489/607/701/medical-background-vector.jpg')",
                 backgroundPosition: 'center',
@@ -85,7 +85,7 @@ export default function Home() {
                 backgroundRepeat: 'no-repeat',
             }}>
 
-            <div className={classes.mainFeaturedPost} style={{ width: '100vw' }}>
+            <div className={classes.mainFeaturedPost} style={{ width: '99vw' }}>
                 <Grid container>
                     <Grid item md={6}>
                         <div className={classes.mainFeaturedContent}>
@@ -104,15 +104,7 @@ export default function Home() {
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                     <Tab label="Report Management" {...a11yProps(0)} style={{ flex: 1 }} />
                     <Tab label="User Management" {...a11yProps(1)} style={{ flex: 1 }} />
-                    <button style={{
-                        fontSize: '1.5vh',
-                        width: "5vw",
-                        borderRadius: "10px",
-                        height: '4vh',
-                        marginTop: "0.5rem",
-                        marginBottom: '0.5rem'
-                    }}
-                        className="btn waves-effect waves-light hoverable ">Log Out</button>
+                    
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>

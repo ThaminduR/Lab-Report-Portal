@@ -48,7 +48,7 @@ class SearchU extends React.Component {
         return (
             <div
                 style={{
-                    width: '100vw',
+                    width: '99vw',
                     height: '100vh',
                     backgroundImage: "url('https://c7.uihere.com/files/489/607/701/medical-background-vector.jpg')",
                     backgroundPosition: 'center',
@@ -57,7 +57,7 @@ class SearchU extends React.Component {
                 }}>
 
                 <div style={{
-                    width: '100vw',
+                    width: '99vw',
                     height: '30vh',
                     position: 'relative',
                     backgroundImage: 'url(https://mares-med.com/profiles/recruiter/themes/cloudy/images/search-container-img.jpg)',

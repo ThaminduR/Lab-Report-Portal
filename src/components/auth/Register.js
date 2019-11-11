@@ -30,10 +30,10 @@ class Register extends Component {
         const { errors } = this.state;
         return (
             <div style={{
-                width: '100vw',
+                width: '99vw',
             }}>
                 <div style={{
-                    width: '100vw',
+                    width: '99vw',
                     height:'30vh',
                     position: 'relative',
                     backgroundImage: 'url(https://mares-med.com/profiles/recruiter/themes/cloudy/images/search-container-img.jpg)',
