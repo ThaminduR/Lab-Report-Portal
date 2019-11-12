@@ -9,6 +9,7 @@ import Home from './components/layout/Home';
 import Admin from './components/layout/adminHome';
 import SearchU from './components/layout/searchUser';
 import SearchR from './components/layout/searchReport';
+import AddReport from './Form/AddReport';
 
 
 const routing = (
@@ -20,6 +21,8 @@ const routing = (
             <Route exact path="/register" component={Register} />
             <Route exact path="/searchreport" component={SearchR} />
             <Route exact path="/searchuser" component={SearchU} />
+            <Route exact path="/reports" component={AddReport} />
+            <Route exact path="/newreport" component={AddReport} />
         </div>
     </Router>
 )

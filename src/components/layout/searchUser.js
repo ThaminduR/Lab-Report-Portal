@@ -25,7 +25,7 @@ class SearchU extends React.Component {
     };
 
     getData = () => {
-        fetch(`http://localhost:4000/restaurants`)
+        fetch(``)
             .then(response => response.json())
             .then(data => {
                 const { query } = this.state;

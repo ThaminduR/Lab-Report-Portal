@@ -104,13 +104,13 @@ export default function Home() {
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                     <Tab label="Report Management" {...a11yProps(0)} style={{ flex: 1 }} />
                     <Tab label="User Management" {...a11yProps(1)} style={{ flex: 1 }} />
-                    
+
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
                 <div className="col s12 center-align">
                     <div>
-                        <Link to="/searchreport" >
+                        <Link to="/newreport" >
                             <button
                                 style={{
                                     alignSelf: 'center',

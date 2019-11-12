@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 class SearchR extends React.Component {
     state = {
         query: "",
@@ -25,7 +24,7 @@ class SearchR extends React.Component {
     };
 
     getData = () => {
-        fetch(`http://localhost:4000/restaurants`)
+        fetch(``)
             .then(response => response.json())
             .then(data => {
                 const { query } = this.state;
